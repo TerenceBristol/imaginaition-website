@@ -314,7 +314,6 @@ export const siteConfig: SiteConfig = {
 
   navigationItems: [
     { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' }
   ],
@@ -331,7 +330,6 @@ export const siteConfig: SiteConfig = {
       ],
       company: [
         { name: 'About Us', href: '#about' },
-        { name: 'Portfolio', href: '#portfolio' },
         { name: 'Partnership', href: '#about' },
         { name: 'Contact', href: '#contact' }
       ]

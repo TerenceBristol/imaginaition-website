@@ -1,4 +1,10 @@
 import { MainService, Service } from '@/types';
+import { portfolioItems } from './portfolio';
+
+// Helper function to get portfolio items by service type
+const getPortfolioByServiceType = (serviceType: string) => {
+  return portfolioItems.filter(item => item.serviceType === serviceType);
+};
 
 // Main Services (Full Spotlight Treatment)
 export const mainServices: MainService[] = [
@@ -14,7 +20,7 @@ export const mainServices: MainService[] = [
       'Unlimited venues',
       '20-25 billboard-quality final images'
     ],
-    examples: [], // Will be populated from portfolio data
+    examples: getPortfolioByServiceType('fashion'),
     category: 'main',
     detailedPricing: [
       {
@@ -65,7 +71,7 @@ export const mainServices: MainService[] = [
       'Billboard-quality resolution',
       'Multiple product options'
     ],
-    examples: [], // Will be populated from portfolio data
+    examples: getPortfolioByServiceType('product'),
     category: 'main',
     detailedPricing: [
       {
@@ -130,7 +136,7 @@ export const mainServices: MainService[] = [
       'Unlimited usage rights',
       'Professional quality'
     ],
-    examples: [], // Will be populated from portfolio data
+    examples: getPortfolioByServiceType('avatar'),
     category: 'main',
     detailedPricing: [
       {
@@ -186,7 +192,7 @@ export const additionalServices: Service[] = [
       'Multi-platform content',
       'Rapid content scaling'
     ],
-    examples: [],
+    examples: getPortfolioByServiceType('marketing'),
     category: 'additional'
   },
   {
@@ -200,7 +206,7 @@ export const additionalServices: Service[] = [
       'Market-tested designs',
       'Scalable brand assets'
     ],
-    examples: [],
+    examples: getPortfolioByServiceType('branding'),
     category: 'additional'
   },
   {
@@ -214,7 +220,7 @@ export const additionalServices: Service[] = [
       'Specialized workflow integration',
       'Ongoing model optimization'
     ],
-    examples: [],
+    examples: getPortfolioByServiceType('training'),
     category: 'additional'
   },
   {
@@ -228,7 +234,7 @@ export const additionalServices: Service[] = [
       'Live editing and refinement',
       'Rapid iteration cycles'
     ],
-    examples: [],
+    examples: getPortfolioByServiceType('content'),
     category: 'additional'
   }
 ];
