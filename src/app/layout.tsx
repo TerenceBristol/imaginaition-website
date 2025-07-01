@@ -3,6 +3,7 @@ import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "@/components/ui/scroll-to-top";
 import { AccessibilityProvider, SkipLinks } from "@/components/accessibility/AccessibilityEnhancements";
+import { StagewiseToolbar } from '@stagewise/toolbar-next';
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -161,6 +162,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${inter.variable} antialiased bg-black text-white`}
       >
+        <StagewiseToolbar />
         <AccessibilityProvider>
           <SkipLinks links={skipLinks} />
           {children}
